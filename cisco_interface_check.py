@@ -1,11 +1,13 @@
 from netmiko import ConnectHandler
+import os 
+
 
 # --- Step 2: Build the Cisco Netmiko Connection ---
 cisco_device = {
     "device_type": "cisco_ios",
-    "host": "54.90.112.247",
-    "username": "tchellali",  #  assigned username
-    "password": "password101!",  # assigned password
+    "host": os.getenv("CISCo_HOST"),
+    "username": os.getenv("CISCo_USERNAME"),  #  assigned username
+    "password": os.getenv("CISCo_PASSWORD"),  # assigned password
 }
 
 print("Connecting to Cisco Catalyst device via Netmiko...")
