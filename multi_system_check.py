@@ -24,7 +24,7 @@ cisco_commands = [
         'sh ip version',
         'show ip interface brief'
     ]
-linu
+
 
 
 for device in devices :

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>FONI Interface State</title>
+</head>
+<body>
+    <h1>FONI Interface State</h1>
+
+   {% for system in systems %}
+<section>
+    <h2>{{ system.name }}</h2>
+    <p>Interface: {{ system.interface }}</p>
+    <p>Stage: {{ system.stage }}</p>
+    <pre>{{ system.output }}</pre>
+</section>
+{% endfor %}
+</body>
+</html>

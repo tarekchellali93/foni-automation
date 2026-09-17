@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FONI Device Selection</title>
+</head>
+<body>
+    <h1>Select a FONI System</h1>
+    <form>
+        <label for="device">System:</label>
+        <select id="device" name="device">
+            {% for device in devices %}
+                <option value="{{ device['name'] }}">
+                    {{ device['name'] }} - {{ device['role'] }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+</body>
+</html>
